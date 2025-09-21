@@ -837,6 +837,8 @@ def create_step2_interface(total_cost):
     <p>Now distribute this investment across years 2025-2030 as percentages.</p>
     </div>
     """.format(total_cost/1e9), unsafe_allow_html=True)
+
+    st.write("**Before moving to the next actions scroll down model parameters option and adjust Prioritization Strategy parameter**")
     
     st.write("**Choose how to distribute the total investment as percentages across years:**")
     
@@ -2044,6 +2046,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
