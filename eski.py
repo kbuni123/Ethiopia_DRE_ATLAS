@@ -1460,7 +1460,7 @@ def main():
                 - Very remote + tiny settlements (>75km, <20 connections) → Always SHS
                 - Ideal mini-grid conditions (15-40km, 500-1500 pop, high demand) → Always Mini-grid
                 
-               # **Technology Diversity Factor:** {params.get('technology_diversity', 0.1):.1f}
+               # Technology Diversity Factor:** {params.get('technology_diversity', 0.1):.1f}
                # - Adds slight randomization to create realistic technology mix
                 #- Adjust in sidebar to control diversity (0=strict rules, 0.5=more variation)
                 """)
@@ -2044,6 +2044,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
