@@ -838,7 +838,7 @@ def create_step2_interface(total_cost):
     </div>
     """.format(total_cost/1e9), unsafe_allow_html=True)
 
-    st.write("***!! Before moving to the next action, scroll down the model parameters option bar and adjust Prioritization Strategy parameters.***")
+    st.write("***!! Before moving to investment distribution strategy, scroll down the model parameters option bar and adjust Prioritization Strategy parameters.***")
     
     st.write("**Choose how to distribute the total investment as percentages across years:**")
     
@@ -2046,6 +2046,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
