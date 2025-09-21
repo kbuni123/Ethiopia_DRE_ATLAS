@@ -1192,9 +1192,22 @@ def main():
     st.title("⚡ Ethiopia Electrification Decision Support Tool")
     st.markdown("""
     <div class="highlight">
-    <h4>Complete Electrification Analysis: Current Status → Total Investment → Distribution → Implementation</h4>
-    This tool analyzes the current electrification status, calculates total investment needed for unelectrified settlements, 
-    then distributes it optimally across years for phased implementation.
+    <h4>Complete Electrification Analysis: This tool is an energy modeling and decision-support platform built to explore Ethiopia’s pathways to achieving 100% electrification by 2030. It combines geospatial data, technology cost models, and financing scenarios into an interactive Streamlit application that allows policymakers, planners, and researchers to test different electrification strategies.
+
+        How it works
+        
+       # Pre-Step – Electrification Status Check        
+        Uses satellite nightlight data to identify which settlements are already electrified.        
+        Separates settlements into electrified and unelectrified.
+        
+       # Step 1 – Full Electrification Cost Calculation        
+        Calculates the total cost of providing electricity to all unelectrified settlements.        
+        Assigns the least-cost technology option to each settlement (grid extension, mini-grid, or solar home system).
+        
+        Produces settlement-level outputs such as cost per connection, population served, and demand.
+        
+       # Step 2 – Budget-Constrained Optimization      
+        Uses the Step 1 total cost as the baseline. Lets the user distribute the total cost as percentages across 2025–2030 to simulate phased electrification.
     </div>
     """, unsafe_allow_html=True)
     
@@ -2023,4 +2036,5 @@ def main():
                 st.metric("Total Connections", f"{filtered_df['num_connections'].sum():,}")
 
 if __name__ == "__main__":
+
     main()
