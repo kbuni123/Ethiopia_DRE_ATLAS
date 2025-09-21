@@ -1215,7 +1215,7 @@ def main():
             **Step 2 – Budget-Constrained Optimization with**  
             - Uses the Step 1 total cost as the baseline.  
             - Lets the user distribute the total cost as **percentages across 2025–2030** to simulate phased electrification.  
-            -The user gets to adjust weights to balance competing objectives for prioritizing a settlement (
+            - Lets the user to adjust weights to balance competing objectives for prioritizing the electrification of a settlement.
             - Generates maps and tables showing rollout progress, budget use, and technology mix.  
             """
         )
@@ -2047,6 +2047,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
