@@ -1210,7 +1210,8 @@ def main():
 
             **Step 1 – Full Electrification Cost Calculation**  
             - Calculates the **total cost** of providing electricity to all unelectrified settlements without budget constraints. The cost of the technology is defined by the user.
-            - The technology for a settlement is selected based on settlement characteristics(road access, distance from existing grid, population size)
+            - The technology for a settlement is selected based on settlement characteristics(road access, distance from existing grid, population size).
+            
             **Step 2 – Budget-Constrained Optimization with**  
             - Uses the Step 1 total cost as the baseline.  
             - Lets the user distribute the total cost as **percentages across 2025–2030** to simulate phased electrification.  
@@ -2046,6 +2047,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
