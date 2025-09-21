@@ -1192,22 +1192,34 @@ def main():
     st.title("⚡ Ethiopia Electrification Decision Support Tool")
     st.markdown("""
     <div class="highlight">
-    <h4>Complete Electrification Analysis: This tool is an energy modeling and decision-support platform built to explore Ethiopia’s pathways to achieving 100% electrification by 2030. It combines geospatial data, technology cost models, and financing scenarios into an interactive Streamlit application that allows policymakers, planners, and researchers to test different electrification strategies.
+    <h4>Complete Electrification Analysis:  <p>
+        This tool is an <b>energy modeling and decision-support platform</b> built to explore Ethiopia’s pathways to achieving 
+        <b>100% electrification by 2030</b>. It combines geospatial data, technology cost models, and financing scenarios 
+        into an interactive Streamlit application that allows policymakers, planners, and researchers to test 
+        different electrification strategies.
+        </p>
 
-        How it works
+        <h5>⚙️ How it Works</h5>
         
-       # Pre-Step – Electrification Status Check        
-        Uses satellite nightlight data to identify which settlements are already electrified.        
-        Separates settlements into electrified and unelectrified.
+        <h6>Pre-Step – Electrification Status Check</h6>
+        <ul>
+          <li>Uses satellite nightlight data to identify which settlements are already electrified.</li>
+          <li>Separates settlements into <i>electrified</i> and <i>unelectrified</i>.</li>
+        </ul>
         
-       # Step 1 – Full Electrification Cost Calculation        
-        Calculates the total cost of providing electricity to all unelectrified settlements.        
-        Assigns the least-cost technology option to each settlement (grid extension, mini-grid, or solar home system).
+        <h6>Step 1 – Full Electrification Cost Calculation</h6>
+        <ul>
+          <li>Calculates the <b>total cost</b> of providing electricity to all unelectrified settlements.</li>
+          <li>Assigns the least-cost technology option to each settlement (grid extension, mini-grid, or solar home system).</li>
+          <li>Produces settlement-level outputs such as cost per connection, population served, and demand.</li>
+        </ul>
         
-        Produces settlement-level outputs such as cost per connection, population served, and demand.
-        
-       # Step 2 – Budget-Constrained Optimization      
-        Uses the Step 1 total cost as the baseline. Lets the user distribute the total cost as percentages across 2025–2030 to simulate phased electrification.
+        <h6>Step 2 – Budget-Constrained Optimization</h6>
+        <ul>
+          <li>Uses the Step 1 total cost as the baseline.</li>
+          <li>Lets the user distribute the total cost as <b>percentages across 2025–2030</b> to simulate phased electrification.</li>
+          <li>Generates maps and tables showing rollout progress, budget use, and technology mix.</li>
+        </ul>
     </div>
     """, unsafe_allow_html=True)
     
@@ -2038,3 +2050,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
