@@ -1195,7 +1195,7 @@ def main():
             """
             ### Complete Electrification Analysis
             This tool is an **energy modeling and decision-support platform** built to explore Ethiopia’s 
-            pathways to achieving **100% electrification by 2030**. It combines geospatial data, technology 
+            pathways to achieving **100% electrification by 2030**. It combines the World Bank's DRE-ATLAS data, user defined technology 
             cost models, and financing scenarios into an interactive Streamlit application that allows 
             policymakers, planners, and researchers to test different electrification strategies.
 
@@ -1203,17 +1203,16 @@ def main():
             #### ⚙️ How it Works
 
             **Pre-Step – Electrification Status Check**  
-            - Uses satellite nightlight data to identify which settlements are already electrified.  
+            - Uses satellite nightlight data from the DRE atlas to identify which settlements are already electrified.  
             - Separates settlements into *electrified* and *unelectrified*.  
 
             **Step 1 – Full Electrification Cost Calculation**  
-            - Calculates the **total cost** of providing electricity to all unelectrified settlements.  
-            - Assigns the least-cost technology option to each settlement (grid extension, mini-grid, or solar home system).  
-            - Produces settlement-level outputs such as cost per connection, population served, and demand.  
-
-            **Step 2 – Budget-Constrained Optimization**  
+            - Calculates the **total cost** of providing electricity to all unelectrified settlements without budget constraints. The cost of the technology is defined by the user.
+            - The technology for a settlement is selected based on settlement characteristics(road access, distance from existing grid, population size)
+            **Step 2 – Budget-Constrained Optimization with**  
             - Uses the Step 1 total cost as the baseline.  
             - Lets the user distribute the total cost as **percentages across 2025–2030** to simulate phased electrification.  
+            -The user gets to adjust weights to balance competing objectives for prioritizing a settlement (
             - Generates maps and tables showing rollout progress, budget use, and technology mix.  
             """
         )
@@ -1238,12 +1237,12 @@ def main():
         
         # Show data summary
         st.markdown("---")
-        st.subheader("📁 Data Files Status")
-        col1, col2 = st.columns(2)
-        with col1:
-            st.info(f"✅ **dre_atlas.csv** loaded: {len(dre_atlas_df):,} total settlements")
-        with col2:
-            st.info(f"✅ **unelectrified.csv** ready: {len(unelectrified_df):,} unelectrified settlements")
+      #  st.subheader("📁 Data Files Status")
+        #col1, col2 = st.columns(2)
+       # with col1:
+       #     st.info(f"✅ **dre_atlas.csv** loaded: {len(dre_atlas_df):,} total settlements")
+       # with col2:
+        #    st.info(f"✅ **unelectrified.csv** ready: {len(unelectrified_df):,} unelectrified settlements")
     
     # Step 1 Tab - ENHANCED WITH TECHNOLOGY DISTRIBUTION
     with tab_step1:
@@ -2045,5 +2044,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
