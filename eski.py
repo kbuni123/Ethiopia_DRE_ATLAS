@@ -1248,7 +1248,9 @@ def main():
     with tab_step1:
         st.header("🎯 Step 1: Calculate Total Investment Required")
         st.write("**Calculate the total cost to electrify ALL unelectrified settlements (without budget constraints)**")
-        st.info(f"📊 Working with {len(unelectrified_df):,} unelectrified settlements from unelectrified.csv")
+        st.write("-Adjust model parameters :(Technology costs, carbon finance, Grid mix)")
+
+        st.info(f"📊 Working with {len(unelectrified_df):,} unelectrified settlements ")
         
         # Step 1 button and results
         step1_complete = 'full_cost_results' in st.session_state
@@ -2042,6 +2044,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
